@@ -18,16 +18,23 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 @Uses(Icon.class)
 public class NuevoContactoView extends Composite<VerticalLayout> {
 
+    TextField tfNombre;
+    TextField tfTelefono;
+    TextField tfDireccion;
+
+    TextField tfCedula;
+
+
     public NuevoContactoView() {
         HorizontalLayout layoutRow = new HorizontalLayout();
-        TextField textField = new TextField();
-        TextField textField2 = new TextField();
+        tfNombre = new TextField();
+        tfTelefono = new TextField();
         HorizontalLayout layoutRow2 = new HorizontalLayout();
-        TextField textField3 = new TextField();
-        TextField textField4 = new TextField();
+        tfDireccion = new TextField();
+        tfCedula = new TextField();
         HorizontalLayout layoutRow3 = new HorizontalLayout();
-        Button buttonPrimary = new Button();
-        Button buttonSecondary = new Button();
+        Button btGuardar = new Button();
+        Button btCancelar = new Button();
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
         layoutRow.setWidthFull();
@@ -35,37 +42,37 @@ public class NuevoContactoView extends Composite<VerticalLayout> {
         layoutRow.addClassName(Gap.MEDIUM);
         layoutRow.setWidth("100%");
         layoutRow.setHeight("min-content");
-        textField.setLabel("Nombre");
-        textField.setWidth("min-content");
-        textField2.setLabel("Teléfono");
-        textField2.setWidth("min-content");
+        tfNombre.setLabel("Nombre");
+        tfNombre.setWidth("min-content");
+        tfTelefono.setLabel("Teléfono");
+        tfTelefono.setWidth("min-content");
         layoutRow2.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow2);
         layoutRow2.addClassName(Gap.MEDIUM);
         layoutRow2.setWidth("100%");
         layoutRow2.setHeight("min-content");
-        textField3.setLabel("Dirección");
-        textField3.setWidth("min-content");
-        textField4.setLabel("Cédula");
-        textField4.setWidth("min-content");
+        tfDireccion.setLabel("Dirección");
+        tfDireccion.setWidth("min-content");
+        tfCedula.setLabel("Cédula");
+        tfCedula.setWidth("min-content");
         layoutRow3.setWidthFull();
         getContent().setFlexGrow(1.0, layoutRow3);
         layoutRow3.addClassName(Gap.MEDIUM);
         layoutRow3.setWidth("100%");
         layoutRow3.setHeight("min-content");
-        buttonPrimary.setText("Guardar");
-        buttonPrimary.setWidth("min-content");
-        buttonPrimary.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        buttonSecondary.setText("Cancelar");
-        buttonSecondary.setWidth("min-content");
+        btGuardar.setText("Guardar");
+        btGuardar.setWidth("min-content");
+        btGuardar.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        btCancelar.setText("Cancelar");
+        btCancelar.setWidth("min-content");
         getContent().add(layoutRow);
-        layoutRow.add(textField);
-        layoutRow.add(textField2);
+        layoutRow.add(tfNombre);
+        layoutRow.add(tfTelefono);
         getContent().add(layoutRow2);
-        layoutRow2.add(textField3);
-        layoutRow2.add(textField4);
+        layoutRow2.add(tfDireccion);
+        layoutRow2.add(tfCedula);
         getContent().add(layoutRow3);
-        layoutRow3.add(buttonPrimary);
-        layoutRow3.add(buttonSecondary);
+        layoutRow3.add(btGuardar);
+        layoutRow3.add(btCancelar);
     }
 }
